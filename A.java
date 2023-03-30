@@ -1,18 +1,34 @@
-class B {
-   public void p(double i) {
-      System.out.println(i * 2);
-   }
-}
-
-public class A extends B {
-   public void p(double i) {
-      System.out.println(i);
-   }
-   
-   public static void main(String[] args) {
-      A a = new A();
-      a.p(10);
-      a.p(10.0);
-            
-   }
+public class A {
+    String a;
+    
+    public String A() {
+      return "Hola";
+    }
+    
+    public void setPalabra(String b) {
+      a = b;
+    }
+    
+    public String getPalabra() {
+      return a;
+    }
+    
+    public void metodo1() {
+      System.out.println("Metodo 1");
+    }
+    
+    public void metodo2() {
+      System.out.println("Metodo 2");
+    }
+    
+    public static void main(String[] args) {
+      A obj = new A();
+      obj.metodo1();
+      obj.metodo2();
+      A obj1 = new A();
+      System.out.println(obj1.A());
+      A obj2 = new A();
+      obj2.setPalabra("Mundo");
+      System.out.println(obj2.getPalabra());
+    }
 }

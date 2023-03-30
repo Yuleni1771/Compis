@@ -60,6 +60,7 @@ class Libro extends Producto {
 public class ProductoDriver {
     public static void main(String args[]) {
       Libro l = new Libro("Crimen y castigo", "Dostoivsky", "Porrua", 340.2);
+      l.setPrecio(364.50);
       System.out.println(l.toString());
       
       Television tv1 = new Television("S1", "Samsung", 4000.0);
