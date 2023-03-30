@@ -26,17 +26,16 @@ border-color:#FFFFFF;
 section {
 	background-color: rgba(128,128,128,0.5);
     	margin-left: 3%;
-    	margin-right: 10%;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .a1 {
 	margin-left: 58%;
 	float: right;
 	position: absolute;
-	transform: translate(-14%, -80%);
+	transform: translate(-18%, -95%);
 	background-color: rgba(98,98,98,0.5);
-	font-size: 20px;
+	font-size: 18px;
 }
 
 </style>
@@ -88,67 +87,57 @@ CLASE 6: Programas
 <!--<p align=left><font color=yellow>Libro: Introducción a la
  programación de Java</font></p> -->
 
-<p align=left><font color=yellow>El programa Suma.java no static</font></p>
+<p align=left><font color=yellow>Declaración de campos de datos globales</font></p>
 
 <pre>
-public class Suma {
-    private int a;
-    private int b;
-    private int suma;
+public class Estudiante {
+   private String nombre;
+   private int calificacion;
 
-    public int suma(int i1, int i2) {
-       int suma = 0;
-   
-       for (int i = i1; i <= i2; i++)
-        suma += i;
-     
-       return suma;
-    }
-
-    public static void main(String[] args) {
-       Suma sum = new Suma();
-
-       System.out.println("La suma de 1 a 10 es " + sum.suma(1, 10));
-       System.out.println("La suma de 20 a 30 es " + sum.suma(20, 30));
-       System.out.println("La suma de 35 a 45 es " + sum.suma(35, 45));
-    }
 }
 </pre>
 
-
-<p align=left><font color=yellow>El programa SumaNs.java static</font></p>
+<p align=left><font color=yellow>Declaración de métodos get y set</font></p>
+<p align=left><font color=marroon>El prefijo get se usa para contruir un método que retorne datos:
+</font></p>
 
 <pre>
-public class SumaNs {
-    private int a;
-    private int b;
-    private int suma;
+public class Estudiante {
+   private String nombre;
+   private int calificacion;
 
-    public static int suma(int i1, int i2) {
-        int suma = 0;
-   
-        for (int i = i1; i <= i2; i++)
-         suma += i;
-     
-        return suma;
-    }
+   public int getCalificacion() {
+      return calificacion;
+   }
 
-    public static void main(String[] args) {
-        System.out.println("La suma de 1 a 10 es " + suma(1, 10));
-        System.out.println("La suma de 20 a 30 es " + suma(20, 30));
-        System.out.println("La suma de 35 a 45 es " + suma(35, 45));
-    }
 }
 </pre>
 
-<p align=left><font color=yellow>El programa Estudiante.java</font></p>
+<p align=left><font color=marroon>El prefijo set se usa para contruir un método que asigne valores a los campos
+de datos globales:
+</font></p>
 
 
+
+<pre>
+public class Estudiante {
+   private String nombre;
+   private int calificacion;
+
+   public int getCalificacion() {
+      return calificacion;
+   }
+
+   public void setCalificacion(int calificacion) {
+      this.calificacion = calificacion;
+   }
+}
+</pre>
+
+<p align=left><font color=yellow>La clase C4c del 17 de febrero del 2022</font></p>
 
 <p align=left><font color=yellow>El método main</font></p>
-<p align=left><font color=marroon>Para nombrar al método principal se usa <i>main</i>. Uso de la consola
-<br>
- para desplegar la salida :
+<p align=left><font color=marroon>Para nombrarlo se usa <i>main</i> :
 </font></p>
 
 
@@ -171,63 +160,12 @@ public class Estudiante {
 
    public static void main(String[] args) {
       Estudiante e1 = new Estudiante();
-      
-      e1.setNombre(" ");
-      e1.setCalificacion();
-      
-      System.out.println("El nombre del estudiante, es: " +
-      e1.getNombre() + " el que tiene por calificación: " + 
-      e1.getCalificacion());
-      
    
    }
 }
 </pre>
 
-<p align=left><font color=marroon>El objeto creado en main, es e1. Se presenta la salida en la pantalla
-<br>
- utilizando Syste.out.println()</font></p>
- 
- <p align=left><font color=yellow>Uso del método toString()</font></p>
- 
- <pre>
-public class Estudiante {
-   private String nombre;
-   private int calificacion;
-
-   public int getCalificacion() {
-      return calificacion;
-   }
-   
-   public void setNonbre(Strig nombre) {
-      this.nombre = nombre;
-   }
-   
-   public void setCalificacion(int calificacion) {
-      this.calificacion = calificacion;
-   }
-   
-   public String toString() {
-      return "El nombre del estudiante, es: ";
-   
-   }
-
-   public static void main(String[] args) {
-      Estudiante e1 = new Estudiante();
-      
-      e1.setNombre(" ");
-      e1.setCalificacion();
-      
-      System.out.println("El nombre del estudiante, es: " +
-      e1.getNombre() + " el que tiene por calificación: " + 
-      e1.getCalificacion());
-      
-   
-   }
-}
-</pre>
-
-<p align=left><font color=marroon>Ahora se presenta la salida por medio de un método toString().</font></p>
+<p align=left><font color=marroon>El objeto creado en main, es e1.</font></p>
 
 <!--
 <p align=left><font color=yellow>EJEMPLO DE PROGRAMA EN C++</font></p>
